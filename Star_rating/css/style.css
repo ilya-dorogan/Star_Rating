@@ -1,0 +1,45 @@
+@import "reset.css";
+
+.rating {
+	display: flex;
+	justify-content:flex-start;
+	align-items: center;
+	flex-direction: column;
+	min-height: 768px;
+	min-width: 1366px;
+	background-color: #2A4480;
+}
+
+.rating-name {
+	font-weight: 500;
+	font-family: arial;
+	text-transform: uppercase;
+	font-size: 24px;
+	color: #FFAA00;
+}
+
+.rating-items {
+	display: inline-flex;
+	flex-direction: row-reverse;
+}
+
+.rating-items[data-total-value="1"] .rating-item:nth-child(n+5),
+.rating-items[data-total-value="2"] .rating-item:nth-child(n+4),
+.rating-items[data-total-value="3"] .rating-item:nth-child(n+3),
+.rating-items[data-total-value="4"] .rating-item:nth-child(n+2),
+.rating-items[data-total-value="5"] .rating-item:nth-child(n+1) {
+	color: #FFAA00;
+}
+
+.rating-item {
+	color:#dcdcdc;
+	cursor: pointer;
+	font-size: 50px;
+	transition: .2s;
+}
+
+.rating-item:hover,
+.rating-item:hover ~ .rating-item  {
+	color: #FFD073;
+}
+
